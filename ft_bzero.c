@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: msilva-c <msilva-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: duckiemadu <duckiemadu@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 17:03:51 by msilva-c          #+#    #+#             */
-/*   Updated: 2023/05/04 18:49:15 by msilva-c         ###   ########.fr       */
+/*   Updated: 2023/05/09 20:18:52 by duckiemadu       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, '\0', n);
-} 
+}
 
 // int	main(void)
 // {

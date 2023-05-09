@@ -1,4 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: duckiemadu <duckiemadu@student.42.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 20:16:23 by duckiemadu        #+#    #+#             */
+/*   Updated: 2023/05/09 20:27:16 by duckiemadu       ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+
+int	ft_intmin(char *str)
+{
+	int	i;
+
+	str[1] = '2';
+	i = -147483648;
+	return (i);
+}
 
 static size_t	ft_digits(int n)
 {
@@ -26,7 +47,7 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	size_t	size;
-	
+
 	size = ft_digits(n);
 	str = (char *)malloc(sizeof(char) * (size + 1));
 	if (!str)
@@ -37,10 +58,7 @@ char	*ft_itoa(int n)
 	{
 		str[0] = '-';
 		if (n == -2147483648)
-		{
-			str[1] = '2';
-			n = -147483648;
-		}
+			n = ft_intmin(str);
 		n = -n;
 	}
 	str[size] = '\0';
