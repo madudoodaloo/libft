@@ -6,7 +6,7 @@
 /*   By: msilva-c <msilva-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:04:11 by msilva-c          #+#    #+#             */
-/*   Updated: 2023/05/04 16:07:06 by msilva-c         ###   ########.fr       */
+/*   Updated: 2023/05/10 13:04:30 by msilva-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (ft_setchecker(set, s1[i]) && s1[i])
 		i++;
 	n = ft_strlen(s1);
-	while (ft_setchecker(set, s1[n - 1]) && s1[n - 1])
+	while (ft_setchecker(set, s1[n - 1]) && i < n)
 		n--;
 	str = (char *)malloc(sizeof(char) * (n - i + 1));
 	if (!str)
@@ -51,10 +51,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-/*int	main(void)
+/* int	main(void)
 {
-	printf("%s\n", ft_strtrim("shusos", ""));
-}*/
+	char	*str;
+	
+	str = ft_strtrim("  \t \t \n   \n\n\n\t", " \n\t");
+	if (str == "")
+		printf("STR IS NULL\n");
+	printf("%s\n", str);
+} */
 /*
 params:
 s1: The string to be trimmed.
