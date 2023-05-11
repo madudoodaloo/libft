@@ -6,7 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -f
 
-SRC = ft_atoi.c \
+SRC = 	ft_atoi.c \
 		ft_itoa.c \
 		ft_split.c \
 		ft_calloc.c \
@@ -43,7 +43,9 @@ SRC = ft_atoi.c \
 
 OBJ = $(SRC:.c=.o)
 
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
+BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+		ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+		ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 BONUS_OBJ = $(BONUS:.c=.o)
 
